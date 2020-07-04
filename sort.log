@@ -1,0 +1,7 @@
+2020-07-04 21:51:24,960 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.QuickSorting: 15272101
+2020-07-04 21:51:24,963 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.MergeSorting: 16297700
+2020-07-04 21:51:24,963 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.ShuttleSorting: 1623911700
+2020-07-04 21:51:24,963 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.InsertionSorting: 3248335600
+2020-07-04 21:51:24,963 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.SelectionSorting: 5464768200
+2020-07-04 21:51:24,963 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.ShellSorting: 12924981501
+2020-07-04 21:51:24,964 INFO [main] c.n.a.AlgorithmsApp [AlgorithmsApp.java : 26] com.nix.algorithms.util.BubbleSorting: 14856952301
