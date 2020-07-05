@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class TestingAlgorithm {
+public class RuntimeTestingAlgorithm {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static Long[][] testListOfAlgorithms(SortingAlgorithm[] sortingAlgorithms, int length, int numOfTesting) {
+    public static Long[][] test(SortingAlgorithm[] sortingAlgorithms, int length, int numOfTesting) {
         Long[][] testings = new Long[numOfTesting][sortingAlgorithms.length + 1];
         long start, end;
         int[] num;
@@ -22,7 +22,7 @@ public class TestingAlgorithm {
             ArraysUtil.fillArrayByRandomNums(ints);
             for (int j = 0; j < sortingAlgorithms.length; j++) {
                 num = ints.clone();
-                end = test(sortingAlgorithms[i], num);
+                end = test(sortingAlgorithms[j], num);
                 testings[i][j] = end;
             }
             num = ints.clone();
@@ -37,7 +37,7 @@ public class TestingAlgorithm {
         return testings;
     }
 
-    public static Long[] testAlgorithm(SortingAlgorithm sortingAlgorithm, int[] ints, int numOfTesting) {
+    public static Long[] test(SortingAlgorithm sortingAlgorithm, int[] ints, int numOfTesting) {
         Long[] testings = new Long[numOfTesting];
         long end;
         for (int i = 0; i < numOfTesting; i++) {

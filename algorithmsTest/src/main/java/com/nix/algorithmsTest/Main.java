@@ -17,7 +17,7 @@ public class Main {
                 new SelectionSorting(), new ShellSorting(), new ShuttleSorting()};
         HashMap<String, Long> rating;
 
-        Long[][] testings = TestingAlgorithm.testListOfAlgorithms(sortingAlgorithms, length, numOfTesting);
+        Long[][] testings = RuntimeTestingAlgorithm.test(sortingAlgorithms, length, numOfTesting);
         Long[] maxResults = ArraysUtil.getMaxByColumn(testings);
         rating = RatingOfAlgorithms.runtimeRate(sortingAlgorithms, maxResults);
         rating.forEach((name, runtime) -> logger.info(name + ": " + runtime));
