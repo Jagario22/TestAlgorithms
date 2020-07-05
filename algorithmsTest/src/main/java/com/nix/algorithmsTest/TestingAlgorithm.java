@@ -16,20 +16,20 @@ public class TestingAlgorithm {
         long start, end;
         int[] num;
         int[] ints = new int[length];
+
         logger.debug("Testing is started...");
         for (int i = 0; i < numOfTesting; i++) {
             ArraysUtil.fillArrayByRandomNums(ints);
             for (int j = 0; j < sortingAlgorithms.length; j++) {
                 num = ints.clone();
-                start = System.nanoTime();
-                sortingAlgorithms[j].sort(num);
-                end = System.nanoTime() - start;
+                end = test(sortingAlgorithms[i], num);
                 testings[i][j] = end;
             }
             num = ints.clone();
             start = System.nanoTime();
             Collections.sort(ArraysUtil.asList(num));
             end = System.nanoTime() - start;
+
             testings[i][sortingAlgorithms.length] = end;
             logger.debug("Num of testing №" + (i + 1) + "  " + Arrays.deepToString(testings));
         }
@@ -39,16 +39,22 @@ public class TestingAlgorithm {
 
     public static Long[] testAlgorithm(SortingAlgorithm sortingAlgorithm, int[] ints, int numOfTesting) {
         Long[] testings = new Long[numOfTesting];
-        long start, end;
+        long end;
         for (int i = 0; i < numOfTesting; i++) {
             ArraysUtil.fillArrayByRandomNums(ints);
-            start = System.nanoTime();
-            sortingAlgorithm.sort(ints);
-            end = System.nanoTime() - start;
+            end = test(sortingAlgorithm, ints);
             testings[i] = end;
             logger.debug("Num of testing №" + (i + 1) + "  " + Arrays.toString(testings));
 
         }
         return testings;
+    }
+
+    private static long test(SortingAlgorithm sortingAlgorithm, int[] num) {
+        long start, end;
+        start = System.nanoTime();
+        sortingAlgorithm.sort(num);
+        end = System.nanoTime() - start;
+        return end;
     }
 }
