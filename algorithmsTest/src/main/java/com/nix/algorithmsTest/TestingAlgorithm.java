@@ -16,7 +16,7 @@ public class TestingAlgorithm {
         long start, end;
         int[] num;
         int[] ints = new int[length];
-
+        logger.debug("Testing is started...");
         for (int i = 0; i < numOfTesting; i++) {
             ArraysUtil.fillArrayByRandomNums(ints);
             for (int j = 0; j < sortingAlgorithms.length; j++) {
@@ -33,6 +33,7 @@ public class TestingAlgorithm {
             testings[i][sortingAlgorithms.length] = end;
             logger.debug("Num of testing №" + (i + 1) + "  " + Arrays.deepToString(testings));
         }
+        logger.debug("Testing completed...");
         return testings;
     }
 
