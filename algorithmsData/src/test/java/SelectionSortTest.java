@@ -15,10 +15,7 @@ public class SelectionSortTest {
     void run() {
         int[] arr = {100000};
         ArraysUtil.fillArrayByRandomNums(arr);
-
-        List<Integer> list = new ArrayList<>();
-        for (int value : arr)
-            list.add(value);
+        List<Integer> list = ArraysUtil.asList(arr);
 
         selectionSorting.sort(arr);
         Collections.sort(list);

@@ -20,7 +20,7 @@ public class RatingOfAlgorithms {
         for (int i = 0; i < numOfAlgorithms; i++) {
             rating.put(algorithmNames[i], runtime[i]);
         }
-
+        rating.put("Collections.sort()", runtime[runtime.length - 1]);
         rating = rating.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue())

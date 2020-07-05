@@ -2,7 +2,6 @@ import com.nix.algorithms.util.ArraysUtil;
 import com.nix.algorithms.util.BubbleSorting;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,10 +14,7 @@ public class BubbleSortTest {
     void run() {
         int[] arr = {100000};
         ArraysUtil.fillArrayByRandomNums(arr);
-
-        List<Integer> list = new ArrayList<>();
-        for (int value : arr)
-            list.add(value);
+        List<Integer> list = ArraysUtil.asList(arr);
 
         bubbleSorting.sort(arr);
         Collections.sort(list);

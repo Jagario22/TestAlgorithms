@@ -10,21 +10,17 @@ import java.util.*;
 public class Main {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
     private final static int numOfTesting = 3;
+    private final static int length = 100000;
 
     public static void main(String[] args) {
-
-        int[] ints = new int[100000];
-        ArraysUtil.fillArrayByRandomNums(ints);
-
         SortingAlgorithm[] sortingAlgorithms = {new BubbleSorting(), new InsertionSorting(), new MergeSorting(), new QuickSorting(),
                 new SelectionSorting(), new ShellSorting(), new ShuttleSorting()};
         HashMap<String, Long> rating;
 
-        Long[][] testings = TestingAlgorithm.testListOfAlgorithms(sortingAlgorithms, ints, numOfTesting);
+        Long[][] testings = TestingAlgorithm.testListOfAlgorithms(sortingAlgorithms, length, numOfTesting);
         Long[] maxResults = ArraysUtil.getMaxByColumn(testings);
         rating = RatingOfAlgorithms.runtimeRate(sortingAlgorithms, maxResults);
         rating.forEach((name, runtime) -> logger.info(name + ": " + runtime));
-        compareResults(sortingAlgorithms, ints);
     }
 
 

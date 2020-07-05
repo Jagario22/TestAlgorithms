@@ -6,22 +6,31 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class TestingAlgorithm {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static Long[][] testListOfAlgorithms(SortingAlgorithm[] sortingAlgorithms, int[] ints, int numOfTesting) {
-        Long[][] testings = new Long[numOfTesting][sortingAlgorithms.length];
+    public static Long[][] testListOfAlgorithms(SortingAlgorithm[] sortingAlgorithms, int length, int numOfTesting) {
+        Long[][] testings = new Long[numOfTesting][sortingAlgorithms.length + 1];
+        long start, end;
+        int[] num;
+        int[] ints = new int[length];
 
         for (int i = 0; i < numOfTesting; i++) {
+            ArraysUtil.fillArrayByRandomNums(ints);
             for (int j = 0; j < sortingAlgorithms.length; j++) {
-                ArraysUtil.fillArrayByRandomNums(ints);
-                long start = System.nanoTime();
-                sortingAlgorithms[j].sort(ints);
-                long end = System.nanoTime() - start;
+                num = ints.clone();
+                start = System.nanoTime();
+                sortingAlgorithms[j].sort(num);
+                end = System.nanoTime() - start;
                 testings[i][j] = end;
-
             }
+            num = ints.clone();
+            start = System.nanoTime();
+            Collections.sort(ArraysUtil.asList(num));
+            end = System.nanoTime() - start;
+            testings[i][sortingAlgorithms.length] = end;
             logger.debug("Num of testing №" + (i + 1) + "  " + Arrays.deepToString(testings));
         }
         return testings;

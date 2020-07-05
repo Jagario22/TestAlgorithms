@@ -14,16 +14,12 @@ public class ShellSortTest {
     void run() {
         int[] arr = {100000};
         ArraysUtil.fillArrayByRandomNums(arr);
-
-        List<Integer> list = new ArrayList<>();
-        for (int value : arr)
-            list.add(value);
+        List<Integer> list = ArraysUtil.asList(arr);
 
         shellSorting.sort(arr);
         Collections.sort(list);
         for (int i = 0; i < arr.length; i++) {
             assertEquals(list.get(i), arr[i]);
         }
-
     }
 }
