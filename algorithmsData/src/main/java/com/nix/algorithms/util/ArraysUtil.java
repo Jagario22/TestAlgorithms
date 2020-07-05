@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ArraysUtil {
     public static void fillArrayByRandomNums(int[] arr) {
-        int index = 0;
+        int index;
         for (int i = 0; i < arr.length; i++) {
             index = (int) Math.floor(Math.random() * 100000);
             arr[i] = index;
@@ -26,9 +26,9 @@ public class ArraysUtil {
 
         for (int i = 0; i < arr[0].length; i++) {
             max = 0L;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j][i] > max)
-                    max = arr[j][i];
+            for (Long[] longs : arr) {
+                if (longs[i] > max)
+                    max = longs[i];
             }
             result[i] = max;
         }

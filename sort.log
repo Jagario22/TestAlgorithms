@@ -1,8 +1,8 @@
-2020-07-05 11:53:41,684 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.QuickSorting: 16644100
-2020-07-05 11:53:41,685 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.MergeSorting: 19957500
-2020-07-05 11:53:41,685 INFO [main] c.n.a.Main [Main.java : 23] Collections.sort(): 65299500
-2020-07-05 11:53:41,685 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.ShuttleSorting: 1929141100
-2020-07-05 11:53:41,686 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.InsertionSorting: 3571282400
-2020-07-05 11:53:41,686 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.SelectionSorting: 6483242500
-2020-07-05 11:53:41,686 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.ShellSorting: 11475860200
-2020-07-05 11:53:41,686 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.BubbleSorting: 17911335200
+2020-07-05 13:43:06,342 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.QuickSorting: 15580800
+2020-07-05 13:43:06,343 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.MergeSorting: 16873300
+2020-07-05 13:43:06,343 INFO [main] c.n.a.Main [Main.java : 23] Collections.sort(): 56190100
+2020-07-05 13:43:06,343 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.InsertionSorting: 1116723300
+2020-07-05 13:43:06,344 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.ShuttleSorting: 1632436200
+2020-07-05 13:43:06,344 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.SelectionSorting: 5824129400
+2020-07-05 13:43:06,344 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.ShellSorting: 13640287300
+2020-07-05 13:43:06,344 INFO [main] c.n.a.Main [Main.java : 23] com.nix.algorithms.util.BubbleSorting: 15483613100

@@ -7,7 +7,6 @@ public class BubbleSorting implements SortingAlgorithm {
 
         boolean swapped = true;
         int n = num.length;
-        int temp;
 
         while (swapped) {
             swapped = false;

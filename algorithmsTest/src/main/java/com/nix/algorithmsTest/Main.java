@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Main {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
-    private final static int numOfTesting = 3;
+    private final static int numOfTesting = 10;
     private final static int length = 100000;
 
     public static void main(String[] args) {
